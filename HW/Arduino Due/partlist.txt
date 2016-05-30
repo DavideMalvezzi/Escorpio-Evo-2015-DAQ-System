@@ -1,0 +1,38 @@
+Partlist
+
+Exported from untitled.brd at 17/11/2014 17:43:44
+
+EAGLE Version 6.1.0 Copyright (c) 1988-2012 CadSoft
+
+Assembly variant: 
+
+Part     Value          Package      Library       Position (mm)         Orientation
+
+C1       100n           C3225        rcl           (90.17 39.37)         MR270
+C2       100n           C3225        rcl           (71.12 48.26)         R180
+C3       100n           C3225        rcl           (63.5 48.26)          R0
+C4       47u            E-01         ITIVINCI      (71.12 53.34)         R180
+C5       100n           C3225        rcl           (82.55 38.1)          MR270
+C7       47u            E-01         ITIVINCI      (63.5 53.34)          R0
+D1       SD             LED5MM       ITIVINCI      (100.33 57.15)        R180
+D2       CAN            LED5MM       ITIVINCI      (100.33 41.91)        R180
+D3       GSM            LED5MM       ITIVINCI      (100.33 49.53)        R180
+IC1                     ARDUINO2009  arduino       (21.59 20.32)         R0
+IC2                     MEGA_ARDUINO arduino       (21.59 24.13)         R0
+IC3      SN55HVD251     DIL8         microchip_can (82.55 39.37)         R90
+R1       4k7            M1206        rcl           (93.98 64.77)         R180
+R2       10k            M1206        rcl           (93.98 69.85)         R0
+R3       1k             M1206        rcl           (106.68 41.91)        R270
+R4       1k             M1206        rcl           (106.68 57.15)        R270
+R5       1k             M1206        rcl           (106.68 49.53)        R270
+R6       4k7            M1206        rcl           (99.06 33.02)         R180
+R7       10k            M1206        rcl           (106.68 33.02)        R0
+R8       10k            M1206        rcl           (26.67 27.94)         MR270
+R9       10k            M1206        rcl           (43.18 27.94)         MR270
+SV1      ICSP           MA03-2       con-lstb      (86.487 52.07)        R270
+SV2      CANA           MA04-1       con-lstb      (93.98 17.78)         R0
+SV3      CANB           MA04-1       con-lstb      (106.68 17.78)        R0
+SV4      CANC           MA04-1       con-lstb      (119.38 17.78)        R0
+SV5      I2CA           MA05-1       con-lstb      (29.21 17.78)         R0
+SV6      I2CA           MA05-1       con-lstb      (45.72 17.78)         R0
+U$2      SD_CARD        SD           ITIVINCI      (35.56 50.8)          R270
