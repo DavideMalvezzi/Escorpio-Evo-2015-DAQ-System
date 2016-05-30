@@ -1,0 +1,35 @@
+Shell Eco Marathon
+	- Cos'è
+	- Svolgimento
+Escorpio
+	- Cos'è
+	- Risultati
+Sistema di telemetria
+	- Cos'è
+Vantaggi
+	- Strumento di debug
+	- Monitoraggio veicolo
+	- Analisi dei dati post-gara
+	- Miglioramento comunicazione con il pilota
+Livello HW
+	- Interfaccia Can Bus
+		- Semplicità di collegamento
+		- Numero elevato di canali
+		- Diffusione in ambito automotive
+	- Interfaccia SD
+		- File di log
+		- File di configurazione
+	- Interfaccia GSM
+		- Invio e ricezione dati da remoto
+		- Chiamate audio
+Livello Comunicazione
+	- Canale UDP
+		- Invio dati
+	- Canale TCP
+		- Invio e ricezione comandi
+	- ACK e ritrasmissione
+Livello SW
+	- Intefacce grafiche personalizzabili
+		- Interattivo e intuitivo
+	- Geo-localizzazione
+	- Gestione delle telefonate

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield -->
+<html lang="en" dir="ltr" class="client-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Arduino GPRS Shield - Geeetech Wiki</title>
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.18.0">
+<link rel="shortcut icon" href="http://www.geeetech.com/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.geeetech.com/wiki/opensearch_desc.php" title="Geeetech Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://www.geeetech.com/wiki/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Geeetech Wiki Atom feed" href="http://www.geeetech.com/wiki/index.php?title=Special:RecentChanges&feed=atom">
+<link rel="stylesheet" href="http://www.geeetech.com/wiki/load.php?debug=false&lang=en&modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&only=styles&skin=vector&*">
+<style type="text/css" media="all">.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+
+/* cache key: geeetech_wiki:resourceloader:filter:minify-css:4:4250852ed2349a0d4d0fc6509a3e7d4c */
+</style><style type="text/css" media="all">.js-messagebox{margin:1em 5%;padding:0.5em 2.5%;border:1px solid #ccc;background-color:#fcfcfc;font-size:0.8em}.js-messagebox .js-messagebox-group{margin:1px;padding:0.5em 2.5%;border-bottom:1px solid #ddd}.js-messagebox .js-messagebox-group:last-child{border-bottom:thin none transparent}
+
+/* cache key: geeetech_wiki:resourceloader:filter:minify-css:4:8b08bdc91c52a9ffba396dccfb5b473c */
+</style><meta name="ResourceLoaderDynamicStyles" content="">
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: geeetech_wiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="./Arduino GPRS Shield - Geeetech Wiki_files/load.php"></script><style type="text/css"></style><script src="./Arduino GPRS Shield - Geeetech Wiki_files/load(1).php"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Arduino_GPRS_Shield", "wgTitle": "Arduino GPRS Shield", "wgCurRevisionId": 4199, "wgArticleId": 166, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script><script type="text/javascript" src="./Arduino GPRS Shield - Geeetech Wiki_files/load(2).php"></script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Arduino_GPRS_Shield action-view skin-vector">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;" class="js-messagebox"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">Arduino GPRS Shield</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">From Geeetech Wiki</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav">
+					Jump to: <a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#mw-head">navigation</a>,
+					<a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div lang="en" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Features"><span class="tocnumber">2</span> <span class="toctext">Features</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Application_Ideas"><span class="tocnumber">3</span> <span class="toctext">Application Ideas</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Cautions"><span class="tocnumber">4</span> <span class="toctext">Cautions</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Hardware_Diagram"><span class="tocnumber">5</span> <span class="toctext">Hardware Diagram</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Getting_Started"><span class="tocnumber">6</span> <span class="toctext">Getting Started</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Indicator_LEDs"><span class="tocnumber">6.1</span> <span class="toctext">Indicator LEDs</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Power_Up_and_Power_Down_the_GPRS_Shield"><span class="tocnumber">6.2</span> <span class="toctext">Power Up and Power Down the GPRS Shield</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Power_Up_the_GPRS_Shield"><span class="tocnumber">6.2.1</span> <span class="toctext">Power Up the GPRS Shield</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Power_Down_the_GPRS_Shield"><span class="tocnumber">6.2.2</span> <span class="toctext">Power Down the GPRS Shield</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Serial_Port.28UART.29_Communication"><span class="tocnumber">6.3</span> <span class="toctext">Serial Port(UART) Communication</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Upload_Sketch_to_Arduino"><span class="tocnumber">6.4</span> <span class="toctext">Upload Sketch to Arduino</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Step_1:_Creating_a_test_setup_for_the_GPRS_Shield"><span class="tocnumber">6.4.1</span> <span class="toctext">Step 1: Creating a test setup for the GPRS Shield</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#SoftwareSerial_library_Notes"><span class="tocnumber">6.4.2</span> <span class="toctext">SoftwareSerial library Notes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#A_Simple_Source_Code_Examples"><span class="tocnumber">6.5</span> <span class="toctext">A Simple Source Code Examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Schematics"><span class="tocnumber">7</span> <span class="toctext">Schematics</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Resources"><span class="tocnumber">8</span> <span class="toctext">Resources</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#instructions_to_test_the_communication"><span class="tocnumber">9</span> <span class="toctext">instructions to test the communication</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#FAQS"><span class="tocnumber">9.1</span> <span class="toctext">FAQS</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Tools"><span class="tocnumber">9.2</span> <span class="toctext">Tools</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#Steps"><span class="tocnumber">9.3</span> <span class="toctext">Steps</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#How_to_buy"><span class="tocnumber">10</span> <span class="toctext">How to buy</span></a></li>
+</ul>
+</td></tr></tbody></table>
+<h2> <span class="mw-headline" id="Introduction"> Introduction </span></h2>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:GPRS1.jpg" class="image"><img alt="GPRS1.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/400px-GPRS1.jpg" width="400" height="401"></a>
+<a href="http://www.geeetech.com/wiki/index.php/File:GPRS2.jpg" class="image"><img alt="GPRS2.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/400px-GPRS2.jpg" width="400" height="370"></a>
+</p><p>The GPRS Shield is based on SIM900 module from SIMCOM and compatible with Arduino and its clones. The GPRS Shield provides you a way to communicate using the GSM cell phone network. The shield allows you to achieve SMS, MMS, GPRS and Audio via UART by sending AT commands (GSM 07.07 ,07.05 and SIMCOM enhanced AT Commands). The shield also has the 12 GPIOs, 2 PWMs and an ADC of the SIM900 module(They are all 2V8 logic) present onboard.
+</p>
+<h2> <span class="mw-headline" id="Features"> Features </span></h2>
+<ul><li>Quad-Band 850 / 900/ 1800 / 1900 MHz - would work on GSM networks in all countries across the world. 
+</li><li>GPRS multi-slot class 10/8 
+</li><li>GPRS mobile station class B 
+</li><li>Compliant to GSM phase 2/2+ 
+</li><li>Class 4 (2 W @ 850 / 900 MHz) 
+</li><li>Class 1 (1 W @ 1800 / 1900MHz) 
+</li><li>Control via AT commands - Standard Commands: GSM 07.07 &amp; 07.05 | Enhanced Commands: SIMCOM AT Commands. 
+</li><li>Short Message Service - so that you can send small amounts of data over the network (ASCII or raw hexadecimal). 
+</li><li>Embedded TCP/UDP stack - allows you to upload data to a web server. 
+</li><li>RTC supported. 
+</li><li>Selectable serial port. 
+</li><li>Speaker and Headphone jacks 
+</li><li>Low power consumption - 1.5mA(sleep mode) 
+</li><li>Industrial Temperature Range - -40°C to +85 °C 
+</li></ul>
+<p>Specifications 
+</p>
+<h2> <span class="mw-headline" id="Application_Ideas"> Application Ideas  </span></h2>
+<ul><li>M2M (Machine 2 Machine) Applicatoions. 
+</li><li>Remote control of appliances. 
+</li><li>Remote Weather station or a Wireless Sensor Network. 
+</li><li>Vehicle Tracking System with a GPS module. 
+</li></ul>
+<h2> <span class="mw-headline" id="Cautions"> Cautions </span></h2>
+<ul><li>Make sure your SIM card is unlocked. 
+</li><li>The product is provided as is without an insulating enclosure. Please observe ESD precautions specially in dry (low humidity) weather. 
+</li><li>The factory default setting for the GPRS Shield UART is 19200 bps 8-N-1. (Can be changed using AT commands). 
+</li></ul>
+<h2> <span class="mw-headline" id="Hardware_Diagram"> Hardware Diagram </span></h2>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:GPRS001.jpg" class="image"><img alt="GPRS001.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/700px-GPRS001.jpg" width="700" height="373"></a>
+</p>
+<ul><li>Power select - select the power supply for GPRS shield(external power or 5v of arduino)
+</li><li>Power jack - connected to external 4.8~5VDC power supply
+</li><li>Antenna interface - connected to external antenna
+</li><li>Serial port select - select either software serial port or hareware serial port to be connected to GPRS Shield
+</li><li>Hardware Serial - D0/D1 of Arduino
+</li><li>Software serial - D7/D8 of Arduino
+</li><li>Status LED - tell whether the power of SIM900 is on
+</li><li>Net light - tell the status about SIM900 linking to the net
+</li><li>UART of SIM900 - UART pins breakout of SIM900
+</li><li>Microphone - to answer the phone call
+</li><li>Speaker - to answer the phone call
+</li><li>GPIO,PWM and ADC of SIM900 - GPIO,PWM and ADC pins breakout of SIM900
+</li><li>Power key - power up and down for SIM900 
+</li></ul>
+<ul><li>Pins usage on Arduino 
+</li><li>D0 - Unused if you select software serial port to communicate with GPRS Shield
+</li><li>D1 - Unused if you select software serial port to communicate with GPRS Shield
+</li><li>D2 - Unused
+</li><li>D3 - Unused
+</li><li>D4 - Unused
+</li><li>D5 - Unused
+</li><li>D6 - Unused
+</li><li>D7 - Used if you select software serial port to communicate with GPRS Shield
+</li><li>D8 - Used if you select software serial port to communicate with GPRS Shield
+</li><li>D9 - Used for software control the power up or down of the SIM900
+</li><li>D10 - Unused
+</li><li>D11 - Unused
+</li><li>D12 - Unused
+</li><li>D13 - Unused
+</li><li>D14(A0) - Unused
+</li><li>D15(A1) - Unused
+</li><li>D16(A2) - Unused
+</li><li>D17(A3) - Unused
+</li><li>D18(A4) - Unused
+</li><li>D19(A5) - Unused
+</li><li>Note: A4 and A5 are connected to the I2C pins on the SIM900. The SIM900 however cannot be accessed via the I2C .
+</li></ul>
+<h2> <span class="mw-headline" id="Getting_Started"> Getting Started </span></h2>
+<ul><li><b>Insert a unlock SIM card</b>
+</li></ul>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:GPRS005.jpg" class="image"><img alt="GPRS005.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-GPRS005.jpg" width="500" height="435"></a>
+</p>
+<ul><li><b>Make sure the antenna pad buckled properly</b>
+</li></ul>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:GPRS002.jpg" class="image"><img alt="GPRS002.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-GPRS002.jpg" width="500" height="515"></a>
+</p>
+<ul><li><b>Assemble the GSM antenna</b>
+</li></ul>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:GPRS003.jpg" class="image"><img alt="GPRS003.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-GPRS003.jpg" width="500" height="513"></a>
+</p>
+<ul><li><b>Chooose communication port properly using the jumpers</b>
+</li></ul>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:GPRS0003.jpg" class="image"><img alt="GPRS0003.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-GPRS0003.jpg" width="500" height="513"></a>
+</p>
+<ul><li><b>Assemble GPRS shield to Arduino and download the sketch</b>
+</li></ul>
+<ul><li><b>Press power key about 2 seconds to turn on the GPRS shield</b>
+</li></ul>
+<h3> <span class="mw-headline" id="Indicator_LEDs"> Indicator LEDs </span></h3>
+<p>There are three indicator LEDs(PWR(Green), Staus(Blue), Netlight(Red)) on the GPRS Shield, users can know about the working state of the shield based on the three indicator LEDs. Detailed information please refer to the following table: 
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Indicator_LEDs.jpg" class="image"><img alt="Indicator LEDs.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/Indicator_LEDs.jpg" width="607" height="188"></a>
+</p>
+<h3> <span class="mw-headline" id="Power_Up_and_Power_Down_the_GPRS_Shield"> Power Up and Power Down the GPRS Shield </span></h3>
+<h4> <span class="mw-headline" id="Power_Up_the_GPRS_Shield"> Power Up the GPRS Shield  </span></h4>
+<p>The GPRS Shield can be turned on by two ways: 
+</p>
+<ul><li>1, <b>Hardware Triger</b>; Press the ON/OFF Button about two seconds.The power up scenarios illustrates as following figure:
+</li></ul>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:GPRS_ONs.jpg" class="image"><img alt="GPRS ONs.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/800px-GPRS_ONs.jpg" width="800" height="353"></a> 
+<a href="http://www.geeetech.com/wiki/index.php/File:JP.png" class="image"><img alt="JP.png" src="./Arduino GPRS Shield - Geeetech Wiki_files/JP.png" width="694" height="554"></a>
+</p>
+<ul><li>2, <b>Software Triger</b>; If use this way to power up the GPRS Shield, JP need to be soldered, then Digital Pin 9 of the Arduino will act as Software Triger port and Digital Pin 9 can not be use as other purpose. Then give Digital Pin 9 a Turn on Impulse can power up the GPRS Shield. The power up scenarios illustrates as following figure:
+</li></ul>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:GPRS_Pwrs.jpg" class="image"><img alt="GPRS Pwrs.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/GPRS_Pwrs.jpg" width="800" height="340"></a>
+</p><p>The following code is power up subroutine for Arduino if using software triger: 
+</p>
+<pre>void powerUp()
+{
+ pinMode(9, OUTPUT); 
+ digitalWrite(9,LOW);
+ delay(1000);
+ digitalWrite(9,HIGH);
+ delay(2000);
+ digitalWrite(9,LOW);
+ delay(3000);
+}
+</pre>
+<p>When power on procedure completes, the SIM900 will send out following result code to indicate the GPRS shield is ready to operate; When set as fixed baud rate, the SIM900 will send out result code: RDY This result code does not appear when auto baud rate is active.
+</p>
+<h4> <span class="mw-headline" id="Power_Down_the_GPRS_Shield"> Power Down the GPRS Shield </span></h4>
+<p>The GPRS Shield can be turned off by following ways: 
+</p>
+<ul><li>1, <b>Normal power down procedure</b>: Turn off the GPRS shield by using Hardware Triger; Press the ON/OFF Button about two seconds. 
+</li></ul>
+<p>The power down scenarios illustrates as following figure: 
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gprspowerdown.jpg" class="image"><img alt="Gprspowerdown.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/800px-Gprspowerdown.jpg" width="800" height="330"></a>
+</p><p>2, <b>Normal power down procedure</b>: If JP is soldered, then give Digital Pin 9 of the Arduino(act as Software Triger) a Turn off Impulse can turn off the GPRS Shield. The power down scenarios illustrates as following figure: 
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:GprsPwrd1.jpg" class="image"><img alt="GprsPwrd1.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/800px-GprsPwrd1.jpg" width="800" height="352"></a>
+</p><p>The following code is power down subroutine for Arduino if using software triger: 
+</p>
+<pre>void powerDown()
+{
+ pinMode(9, OUTPUT); 
+ digitalWrite(9,LOW);
+ delay(1000);
+ digitalWrite(9,HIGH);
+ delay(2000);
+ digitalWrite(9,LOW);
+ delay(3000);
+}
+</pre>
+<ul><li>3, <b>Normal power down procedure</b>:Turn off the GPRS shield by sending AT command “AT+CPOWD=1” to SIM900 module. 
+</li></ul>
+<p>When GPRS Shield power dowm in Normal power down procedure, the procedure lets the SIM900 log off from the network and allows the software to enter into a secure state and save data before completely disconnecting the power supply. Before the completion of the power down procedure the SIM900 will send out result code: NORMAL POWER DOWN 
+</p><p><br>
+</p>
+<ul><li>4, <b>Over-voltage or Under-voltage Automatic Power Down</b>: SIM900 will constantly monitor the voltage applied on the VBAT. 
+</li></ul>
+<p>①If the voltage ≤ 3.3V, the following URC will be presented: 
+</p><p><br>
+UNDER-VOLTAGE WARNNING 
+</p><p>②If the voltage ≥ 4.7V, the following URC will be presented: 
+</p><p>OVER-VOLTAGE WARNNING 
+</p><p>③The uncritical voltage range is 3.2V to 4.8V. If the voltage &gt; 4.8V or &lt; 3.2V, SIM900 will be automatic power down soon. If the voltage &lt; 3.2V, the following URC will be presented: 
+</p><p>UNDER-VOLTAGE POWER DOWN 
+</p><p>④If the voltage &gt; 4.8V, the following URC will be presented: 
+</p><p>OVER-VOLTAGE POWER DOWN
+</p>
+<ul><li>5, <b>Over-temperature or Under-temperature Automatic Power Down</b>: SIM900 will constantly monitor the temperature of the module. 
+</li></ul>
+<p>①If the temperature &gt; 80℃, the following URC will be presented: 
+</p><p>+CMTE:1 
+</p><p>②If the temperature &lt; -30℃, the following URC will be presented: 
+</p><p>+CMTE:-1 
+</p><p>③The uncritical temperature range is -40℃ to +85℃. If the temperature &gt; +85℃ or &lt; -40℃, the module will be automatic power down soon. If the temperature &gt; +85℃, the following URC will be presented: 
+</p><p>+CMTE:2 
+</p><p>④If the temperature &lt; -40℃, the following URC will be presented: 
+</p><p>+CMTE:-2 
+</p><p>When the GPRS Shield encounters POWER DOWN scenario, the AT commands can not be executed. The SIM900 logs off from network and enters the POWER DOWN mode, only the RTC is still active. POWER DOWN can also be indicated by STATUS LED(Blue), which is off in this mode. 
+</p><p><b>Note</b>: 
+</p>
+<ul><li><b>To monitor the temperature, users can use the “AT+CMTE” command to read the temperature when GPRS Shield is powered on. </b>
+</li><li><b>To monitor the supply voltage, users can use the “AT+CBC” command which includes a parameter: voltage value(in mV) when GPRS Shield is powered on.</b>
+</li></ul>
+<h3> <span class="mw-headline" id="Serial_Port.28UART.29_Communication"> Serial Port(UART) Communication </span></h3>
+<p>The GPRS Shield is used UART protocol to communicate with an Arduino/Arduino clone; Users can use jumpers to connect (RX,TX) of the shield to either Software Serial(D8,D7) or Hardware Serial(D1,D0) of the Arduino.Detailed information is showed as the following picture: 
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:GPRSComs.jpg" class="image"><img alt="GPRSComs.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/GPRSComs.jpg" width="700" height="525"></a>
+</p><p><b>Note: </b>
+</p><p><font color="red">
+</font></p><font color="red">
+<ul><li>Not all Arduino boards support software serial on D7 and D8, For example Arduino Mega and Mega 2560 only support the following pins for RX: 10, 11, 12, 13, 50, 51, 52, 53, 62, 63, 64, 65, 66, 67, 68, 69. So Arduino Mega doesn't support soft serial on Pin D7 and D8. If using GPRS shield with Ardiuno Mega, please use the hardware serial or use the jumper wires wiring GPRS TX and RX to the pins support interrupt on Ardiuno Mega. And not all pins on the Leonardo support change interrupts, so only the following can be used for RX: 8, 9, 10, 11, 14 (MISO), 15 (SCK), 16 (MOSI). More information about Softserial library please visit <a rel="nofollow" class="external free" href="http://arduino.cc/en/Reference/SoftwareSerial">http://arduino.cc/en/Reference/SoftwareSerial</a>
+</li></ul>
+</font><p><font color="red"></font>
+</p>
+<ul><li>Users can use “AT+IPR=?” command to see supported baudrate, it will response a list of supported baudrate. 
+</li><li>Users can use “AT+IPR=x”(x is value of supported baudrate) to set a fixed baud rate and save the configuration to non-volatile flash memory.
+</li></ul>
+<h3> <span class="mw-headline" id="Upload_Sketch_to_Arduino"> Upload Sketch to Arduino </span></h3>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:Grpsaurduinouart.jpg" class="image"><img alt="Grpsaurduinouart.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/600px-Grpsaurduinouart.jpg" width="600" height="484"></a>
+</p><p>The following sketch configures Arduino/Arduino clone as serial link between PC and the GPRS Shield(Jumpers on SWserial side). PC would need a serial terminal software to communicate with it - Window's built-in HyperTerminal, Arduino IDE's Serial Monitor, <a rel="nofollow" class="external text" href="http://musicshield.googlecode.com/files/sscom32E.exe">Serial Terminals(sscom32)</a> or <a rel="nofollow" class="external text" href="http://sites.google.com/site/terminalbpp/">Bray++ Terminal</a>. 
+</p><p>The GPRS Shield comes with all the accessories that you need to get started with sending data over the GSM network except an Arduino board and a GSM SIM Card. If you want to make voice calls, you would also require a headset with microphone. 
+</p>
+<h4> <span class="mw-headline" id="Step_1:_Creating_a_test_setup_for_the_GPRS_Shield">Step 1: Creating a test setup for the GPRS Shield</span></h4>
+<p>AT Commands are simple textual commands sent to the GPRS modem over its serial interface (UART), so you can use any serial terminal software to communicate with it.<br>
+</p><p>Note: Almost all the AT commands should be sent followed by <b>carriage return</b> and you need to select the "+CR"option in the serial port terminal.To experiment with AT commands, you would require a way to power up and communicate with your GPRS Shield. The best way to do this using an Arduino Duemilanove board.<br>
+</p>
+<ol><li>Follow the previously described hardware installation steps to set up the hardware system; 
+</li><li>Make sure the GPRS_TX &amp; GPRS_RX jumpers on the GPRS Shield are mounted in SWSerial position - that is we want GPRS_TX to be connected to D7(RX) and GPRS_RX to D8(TX). 
+</li><li>Connect the Arduino Duemilanove to your computer using a USB cable. 
+</li><li>The ATmega328P microcontroller on Duemilanove board has only one UART which is used for communicating with the PC. What we need is an Arduino Sketch running inside the ATmega328P that would emulate a second serial port (UART) using software on the digital pins D8 and D7 and patch through all the communication between this second software serial port and the actual hardware serial port. By doing this, all the data coming from the computer (connected to the actual hardware UART) would be routed to the GPRS Shield (connected to software UART) then, we would be able to issue AT commands to control the GPRS Shield. The block diagram outlining this scheme is shown below.
+</li></ol>
+<p>For developing such a program, we require to use the SoftwareSerial library included in the libraries of Arduino 1.0 already and the demo code below. 
+</p>
+<pre>//Serial Relay - Arduino will patch a 
+//serial link between the computer and the GPRS Shield
+//at 19200 bps 8-N-1
+//Computer is connected to Hardware UART
+//GPRS Shield is connected to the Software UART 
+#include &lt;SoftwareSerial.h&gt;
+SoftwareSerial GPRS(7, 8);
+unsigned char buffer[64]; // buffer array for data recieve over serial port
+int count=0;     // counter for buffer array 
+void setup()
+{
+ GPRS.begin(19200);               // the GPRS baud rate   
+ Serial.begin(19200);             // the Serial port of Arduino baud rate.
+}
+void loop()
+{
+ if (GPRS.available())              // if date is comming from softwareserial port ==&gt; data is comming from gprs shield
+ {
+   while(GPRS.available())          // reading data into char array 
+   {
+     buffer[count++]=GPRS.read();     // writing data into array
+     if(count == 64)break;
+ }
+   Serial.write(buffer,count);            // if no data transmission ends, write buffer to hardware serial port
+   clearBufferArray();              // call clearBufferArray function to clear the storaged data from the array
+   count = 0;                       // set counter of while loop to zero
+ }
+ if (Serial.available())            // if data is available on hardwareserial port ==&gt; data is comming from PC or notebook
+   GPRS.write(Serial.read());       // write it to the GPRS shield
+}
+void clearBufferArray()              // function to clear buffer array
+{
+ for (int i=0; i&lt;count;i++)
+   { buffer[i]=NULL;}                  // clear all index of array with command NULL
+}
+</pre>
+<ol><li>.Upload the sketch to the Arduino board. 
+</li><li>.Download and fire up serial tool if you don't have one. Choose the correct COM port for Arduino, and set it to operate at 19200 8-N-1 and then click "Open Com". 
+</li><li>.You can power on or off the the SIM900 by pressing the button about 2 second. After power on, the red LED will be on, and the green one beside it will blink and the shield has found the net if it blinks every 3 seconds.
+</li></ol>
+<p>Also, in the serial monitor you should see messages from the shield such as
+RDY 
+</p><p>+CFUN: 1 
+</p><p>+CPIN: READY 
+</p><p>Call Ready 
+</p><p>If you can not see the messages in the serial monitor, you should click the "send new" option that will add carriage return at the end of AT command and then send AT command "AT+IPR=19200" to set the baud rate of the SIM900.
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs_1.jpg" class="image"><img alt="Gprs 1.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/400px-Gprs_1.jpg" width="400" height="317"></a> 
+</p>
+<ul><li>Step 2: Sending a text message (SMS) 
+</li></ul>
+<p>Now that our test setup is ready, let's play around with some AT Commands manually before moving on to programming the Arduino to do this. Let's try sending an SMS to start. 
+</p>
+<ol><li>.Create the setup as described in Step 1 above. 
+</li><li>.Through your serial terminal software, send AT+CMGF=1 and press the Enter key. The GPRS Shield can send SMSes in two modes: Text mode and PDU (or binary) mode. Since we want to send out a human readable message, we will select the text mode. The GPRS Shield will respond with an OK. 
+</li><li>.Click "send new" option and send AT+CMGS="+918446043032". This will instruct the GPRS Shield to start accepting text for a new message meant for the phone number specified (replace the number with the phone number of the target phone). The GPRS Shield will send a &gt; to remind you typing the message.
+</li></ol>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs_2.jpg" class="image"><img alt="Gprs 2.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/400px-Gprs_2.jpg" width="400" height="317"></a>
+</p>
+<ol><li>.Start typing your message and when you are done, and click "send hex" option and then send a hex: 1A. The modem will accept the message and respond with an OK. A few moments later, the message should be received on the handset whose number you had specified.You can refer to the picture below.
+</li></ol>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs_3.jpg" class="image"><img alt="Gprs 3.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/400px-Gprs_3.jpg" width="400" height="317"></a>
+</p><p>NOTE: If, in spite of following the steps as specified above, you aren't able to receive the message on the target handset, then it might be that you need to set the SMS Message Center number. Send the command AT+CSCA="+919032055002" and press the Enter Key. Send this command in between the AT+CMGF and AT+CMGS commands. Replace the phone number specified in the command above with the SMS Center number of your GSM Service Provider. The message center number is specific to each service provider (for example +919032055002 is the message center number for Tata DoCoMo, Pune, India). You can get the message center number by calling up the customer care center of the GSM Service Provider and asking them for it.
+</p>
+<h4> <span class="mw-headline" id="SoftwareSerial_library_Notes">SoftwareSerial library Notes</span></h4>
+<p>With Arduino 1.0 you should be able to use the SoftwareSerial library included with the distribution (instead of NewSoftSerial). However, you must be aware that the buffer reserved for incoming messages are hardcoded to 64 bytes in the library header, "SoftwareSerial.h": 
+1.define _SS_MAX_RX_BUFF 64 // RX buffer size 
+</p><p>This means that if the GPRS module responds with more data than that, you are likely to loose it with a buffer overflow! For instance, reading out an SMS from the module with "AT+CMGR=xx" (xx is the message index), you might not even see the message part because the preceding header information (like telephone number and time) takes up a lot of space. The fix seems to be to manually change _SS_MAX_RX_BUFF to a higher value (but reasonable so you don't use all you precious memory!) 
+</p><p>The Softwareserial library has the following limitations (taken from arduino page) If using multiple software serial ports, only one can receive data at a time. <a rel="nofollow" class="external free" href="http://arduino.cc/hu/Reference/SoftwareSerial">http://arduino.cc/hu/Reference/SoftwareSerial</a> This means that if you try to add another serial device ie grove serial LCD you may get communication errors unless you craft your code carefully.
+</p>
+<h3> <span class="mw-headline" id="A_Simple_Source_Code_Examples">A Simple Source Code Examples</span></h3>
+<p>The demo code below is for the Xduino to send SMS message/dial a voice call/submit a http request to a website and upload datas to the pachube. It has been tested on Arduino Duemilanove but will work on any compatible variant, plesse note that this sketch uses the sorfware UART of ATmega328P. please follow the following steps for running this sketch. 
+</p>
+<ol><li>.With the GPRS Shield removed, download this sketch into your Arduino. 
+</li><li>.Disconnect the Xduino from USB port to remove power source. 
+</li><li>.Set the Serial Port jumpers on the GPRS Shield in SWserial position, to use the Soft Serial port of Arduino. 
+</li><li>.Connect the antenna to the GPRS Shield and insert the SIM Card. 
+</li><li>.Mount the GPRS Shield on Arduino. 
+</li><li>.Connect the Arduino to the computer by USB, and fire up your favorite serial terminal software on computer, choose the COM port for Arduino, set it to operate at 19200 8-N-1. 
+</li><li>.Type command in the terminal to execute different function, threr are 4 functions in the demo: 
+<ol><li>.If you input 't', the demo will send a SMS message to another cellphone which you set(you need set the number in the code); 
+</li><li>.If you input 'd', the program will dial a call to the other cellphone that you set(it is also need you set in the code ); 
+</li><li>.If you input 'h', it will submit a http request to a web that you want to access(it need you set the web adress in the code), it will    return a string from the website if it goes correctly; 
+</li><li>.If you input 's', it will upload the datas to the pachube(for detail you can refer to the explanation in the code). I strongly recommend you input 'h' before input 's', because uploading datas to the pachube need do some setting, after execute the function of submit a http request, the setting will be set. 
+</li></ol>
+</li><li>.If the program returns error in the terminal after you typed the command, don't worry, just try input the command again.
+</li></ol>
+<p><br>
+</p>
+<pre>/*Note: this code is a demo for how to using gprs shield to send sms message, dial a voice call and 
+ send a http request to the website, upload data to pachube.com by TCP connection,
+
+ The microcontrollers Digital Pin 7 and hence allow unhindered
+ communication with GPRS Shield using SoftSerial Library. 
+ IDE: Arduino 1.0 or later
+ Replace the following items in the code:
+ 1.Phone number, don't forget add the country code
+ 2.Replace the Access Point Name
+ 3. Replace the Pachube API Key with your personal ones assigned
+ to your account at cosm.com
+ */
+#include &lt;SoftwareSerial.h&gt;
+#include &lt;String.h&gt;
+SoftwareSerial mySerial(7, 8);
+void setup()
+{
+ mySerial.begin(19200);               // the GPRS baud rate   
+ Serial.begin(19200);    // the GPRS baud rate 
+ delay(500);
+}
+void loop()
+{
+ //after start up the program, you can using terminal to connect the serial of gprs shield,
+ //if you input 't' in the terminal, the program will execute SendTextMessage(), it will show how to send a sms message,
+ //if input 'd' in the terminal, it will execute DialVoiceCall(), etc.
+  if (Serial.available())
+   switch(Serial.read())
+  {
+    case 't':
+      SendTextMessage();
+      break;
+    case 'r':
+      RecieveTextMessage();//This program code by directive'r'to receive, by receiving the information after the return to call the function 
+                           //to verify receiving function. But it can not display the received content in SIM.
+      DialVoiceCall();
+      break;
+    case 'd':
+      DialVoiceCall();
+      break;
+    case 'h':
+      SubmitHttpRequest();
+      break;
+    case 's':
+      Send2Pachube();
+      break;
+  } 
+ if (mySerial.available())
+   Serial.write(mySerial.read());
+}
+///SendTextMessage()
+///this function is to send a sms message
+ void SendTextMessage()
+{
+ mySerial.print("AT+CMGF=1\r");    //Because we want to send the SMS in text mode
+ delay(100);
+ mySerial.println("AT + CMGS = \"+86138xxxxx615\"");//send sms message, be careful need to add a country code before the cellphone number
+ delay(100);
+ mySerial.println("A test message!");//the content of the message
+ delay(100);
+ mySerial.println((char)26);//the ASCII code of the ctrl+z is 26
+ delay(100);
+ mySerial.println();
+}
+ void RecieveTextMessage()
+  {
+  //mySerial.print("AT+CMGF=1\r"); //Because we want to recieve the SMS in text mode
+ //delay(100);
+   mySerial.print("AT+CMGR=1\r");//Because we want to recieve the SMS in text mode
+   delay(100);
+   mySerial.println("AT + CSCA = \"+86135*********\"");//recieve sms message, be careful need to add a country code before the cellphone number
+   delay(100);
+   mySerial.println("A test message!");//the content of the message
+   delay(100);
+   mySerial.println((char)26);//the ASCII code of the ctrl+z is 26
+   delay(100);
+   mySerial.println();
+ //return r;
+ }
+///DialVoiceCall
+///this function is to dial a voice call
+void DialVoiceCall()
+{
+ mySerial.println("ATD + +86138xxxxx615;");//dial the number
+ delay(100);
+ mySerial.println();
+}
+///SubmitHttpRequest()
+///this function is submit a http request
+///attention:the time of delay is very important, it must be set enough 
+void SubmitHttpRequest()
+{
+ mySerial.println("AT+CSQ");
+ delay(100);
+ ShowSerialData();// this code is to show the data from gprs shield, in order to easily see the process of how the gprs shield submit a http request, and the following is for this purpose too.
+ mySerial.println("AT+CGATT?");
+ delay(100);
+ ShowSerialData();
+ mySerial.println("AT+SAPBR=3,1,\"CONTYPE\",\"GPRS\"");//setting the SAPBR, the connection type is using gprs
+ delay(1000);
+ ShowSerialData();
+ mySerial.println("AT+SAPBR=3,1,\"APN\",\"CMNET\"");//setting the APN, the second need you fill in your local apn server
+ delay(4000);
+ ShowSerialData();
+ mySerial.println("AT+SAPBR=1,1");//setting the SAPBR, for detail you can refer to the AT command mamual
+ delay(2000);
+ ShowSerialData();
+ mySerial.println("AT+HTTPINIT"); //init the HTTP request
+ delay(2000); 
+ ShowSerialData();
+ mySerial.println("AT+HTTPPARA=\"URL\",\"www.google.com.hk\"");// setting the httppara, the second parameter is the website you want to access
+ delay(1000);
+ ShowSerialData();
+ mySerial.println("AT+HTTPACTION=0");//submit the request 
+ delay(10000);//the delay is very important, the delay time is base on the return from the website, if the return datas are very large, the time required longer.
+ //while(!mySerial.available());
+ ShowSerialData();
+ mySerial.println("AT+HTTPREAD");// read the data from the website you access
+ delay(300);
+ ShowSerialData();
+ mySerial.println("");
+ delay(100);
+}
+///send2Pachube()///
+///this function is to send the sensor data to the pachube, you can see the new value in the pachube after execute this function///
+void Send2Pachube()
+{
+ mySerial.println("AT+CGATT?");
+ delay(100);
+ ShowSerialData();
+ mySerial.println("AT+CSTT=\"CMNET\"");//start task and setting the APN,
+ delay(1000);
+ ShowSerialData();
+ mySerial.println("AT+CIICR");//bring up wireless connection
+ delay(300);
+ ShowSerialData();
+ mySerial.println("AT+CIFSR");//get local IP adress
+ delay(2000);
+ ShowSerialData();
+ mySerial.println("AT+CIPSPRT=0");
+ delay(3000);
+ ShowSerialData();
+ mySerial.println("AT+CIPSTART=\"tcp\",\"api.cosm.com\",\"8081\"");//start up the connection
+ delay(2000);
+ ShowSerialData();
+ mySerial.println("AT+CIPSEND");//begin send data to remote server
+ delay(4000);
+ ShowSerialData();
+ String humidity = "1031";//these 4 line code are imitate the real sensor data, because the demo did't add other sensor, so using 4 string variable to replace.
+ String moisture = "1242";//you can replace these four variable to the real sensor data in your project
+ String temperature = "30";//
+ String barometer = "60.56";//
+ mySerial.print("{\"method\": \"put\",\"resource\": \"/feeds/42742/\",\"params\"");//here is the feed you apply from pachube
+ delay(500);
+ ShowSerialData();
+ mySerial.print(": {},\"headers\": {\"X-PachubeApiKey\":");//in here, you should replace your pachubeapikey
+ delay(500);
+ ShowSerialData();
+ mySerial.print(" \"_cXwr5LE8qW4a296O-cDwOUvfddFer5pGmaRigPsiO0");//pachubeapikey
+ delay(500);
+ ShowSerialData();
+ mySerial.print("jEB9OjK-W6vej56j9ItaSlIac-hgbQjxExuveD95yc8BttXc");//pachubeapikey
+ delay(500);
+ ShowSerialData();
+ mySerial.print("Z7_seZqLVjeCOmNbEXUva45t6FL8AxOcuNSsQS\"},\"body\":");
+ delay(500);
+ ShowSerialData();
+ mySerial.print(" {\"version\": \"1.0.0\",\"datastreams\": ");
+ delay(500);
+ ShowSerialData();
+ mySerial.println("[{\"id\": \"01\",\"current_value\": \"" + barometer + "\"},");
+ delay(500);
+ ShowSerialData();
+ mySerial.println("{\"id\": \"02\",\"current_value\": \"" + humidity + "\"},");
+ delay(500);
+ ShowSerialData();
+ mySerial.println("{\"id\": \"03\",\"current_value\": \"" + moisture + "\"},");
+ delay(500);
+ ShowSerialData();
+ mySerial.println("{\"id\": \"04\",\"current_value\": \"" + temperature + "\"}]},\"token\": \"lee\"}");
+ delay(500);
+ ShowSerialData();
+ mySerial.println((char)26);//sending
+ delay(5000);//waitting for reply, important! the time is base on the condition of internet 
+ mySerial.println();
+ ShowSerialData();
+ mySerial.println("AT+CIPCLOSE");//close the connection
+ delay(100);
+ ShowSerialData();
+}
+void ShowSerialData()
+{
+ while(mySerial.available()!=0)
+   Serial.write(mySerial.read());
+}
+</pre>
+<h2> <span class="mw-headline" id="Schematics"> Schematics  </span></h2>
+<p><a rel="nofollow" class="external text" href="http://www.geeetech.com/Documents/GPRSshield_sch.pdf">File:GPRSshield_sch.pdf</a>
+</p>
+<h2> <span class="mw-headline" id="Resources"> Resources  </span></h2>
+<p><a rel="nofollow" class="external text" href="http://www.geeetech.com/Documents/SIM900_AT_Command_Manual_V1.03.pdf">SIM900 AT Commands Manual v1.03.pdf</a> 
+</p><p>SIM900_hd_v1.06.pdf 
+</p><p>SIM900_TCP/IP Application Note 
+</p><p>Si5902BDC - Dual N-Channel 30 V (D-S) MOSFETs (used for 2.8V &lt;&gt; 5.0V translation for Serial Interface)
+</p><p><br>
+</p>
+<h2> <span class="mw-headline" id="instructions_to_test_the_communication"> instructions to test the communication </span></h2>
+<p>If you are using a Router rather than a modem or Exchanger, before networking testing for the GPRS module, you should pay attention to the following tips.
+</p><p>1. Specify a fixed IP address for Local Host，hereinafter referred to as  "Local Host IP".
+</p><p>2. Set a Port Mapping on the Router and map the port to Local Host IP. We call the set port "Local Host Port". Local Host Port is within 0 and 65535.
+</p><p>3. Open home page (Google), input "IP" to check your Public IP.
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs_(2).jpg" class="image"><img alt="Gprs (2).jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gprs_(2).jpg" width="500" height="376"></a>
+</p>
+<h3> <span class="mw-headline" id="FAQS"> FAQS </span></h3>
+<p>Q1. Why should I specify a "Local Host Port" on the Router (Port Mapping)? 
+</p><p>ADSL dials through a router and the host shares network through the router. In this case, the host usually extracts Private IP such as 192.168.x.x. for such reasons, only when you specify a ‘Local Host Port’ on the Router (Port Mapping) and forward it to the corresponding Local Host, can the Internet access to the Local Host through this Port.
+</p><p><br>
+Q2. Why should I specify a Fixed Private IP for the Local Host?
+</p><p>Port Mapping is a one-to-one process. If the Local Host is specified to obtain IP automatically, the IP address will probably change when the computer restarts or reconnects to the network. Therefore, it is necessary to specify a Fixed Private IP.
+</p>
+<h3> <span class="mw-headline" id="Tools"> Tools </span></h3>
+<p>1. Arduino IDE
+</p><p>2. Net Assist
+</p><p>3. STC-SIP
+</p>
+<h3> <span class="mw-headline" id="Steps"> Steps </span></h3>
+<p>1, Start the "Net Assist", choose "TCP server" in the dropdown menus of "protocol" (UDP Server is not recommended), change the "Local Host IP" into the Fixed IP. Input the "Local host port" set before and then click “Connect “. As shown in following the picture.
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gpr5s.jpg" class="image"><img alt="Gpr5s.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gpr5s.jpg" width="500" height="483"></a>
+</p><p>2, Open STC-ISP and click "COM Helper"  
+Click "COM Port" and click 115200 in "Baud rate" ( if the code is unreadable in RX Buffer, then re-click Baud rate) , click "Open COM"
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs_(2a.jpg" class="image"><img alt="Gprs (2a.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gprs_(2a.jpg" width="500" height="358"></a>
+</p><p>Input the following code in the text box of "TX Buffer" and then press "Enter".
+</p>
+<pre> AT+CLPORT="TCP","2022" 
+</pre>
+<p>Click "Send Data".  If the "RX Buffer" shows "ok", it is successful.
+</p>
+<pre> OK
+</pre>
+<p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs_(3).jpg" class="image"><img alt="Gprs (3).jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gprs_(3).jpg" width="500" height="360"></a>
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs_(4).jpg" class="image"><img alt="Gprs (4).jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/Gprs_(4).jpg" width="500" height="352"></a>
+</p><p>Input in "TX Buffer" as follows,
+</p><p><br>
+</p>
+<pre> AT+CIPSTART="TCP","183.37.246.171","10000" 
+</pre>
+<p>(NB.IP “183.37.246.171” is a Public IP from Google; “10000” is the “Local Host Port”).
+And then click "Send Data". The "RX Buffer" will appear 
+</p>
+<pre> OK
+ CONNECT OK
+</pre>
+<p>as follows, which means the data has been sent successfully.
+Now it can realize the TCP communication.
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs6.jpg" class="image"><img alt="Gprs6.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gprs6.jpg" width="500" height="296"></a>
+</p><p>3, Verify the success of communication
+Input 
+</p>
+<pre> AT+CIPSEND
+</pre>
+<p>in "TX Buffer", then press "Enter".  Click "Send Data" and the "RX Buffer" appears
+</p>
+<pre> &gt;
+</pre>
+<p>as follows. 
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs7.jpg" class="image"><img alt="Gprs7.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gprs7.jpg" width="500" height="305"></a>
+</p><p>Input 
+</p>
+<pre> HELLO WORLD
+</pre>
+<p>in "TX Buffer" and click "Send Data", check "HEX-Mode".
+</p><p>Meanwhile, input 
+</p>
+<pre> 1A
+</pre>
+<p>to end instruction and click "Send Data". It is successful when you see
+</p>
+<pre> SEND OK
+</pre>
+<p><br>
+<a href="http://www.geeetech.com/wiki/index.php/File:Gprs8.jpg" class="image"><img alt="Gprs8.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gprs8.jpg" width="500" height="295"></a>
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs9.jpg" class="image"><img alt="Gprs9.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gprs9.jpg" width="500" height="298"></a>
+</p><p>Now,"Helloword" will appear in "NetAssist".
+</p><p><a href="http://www.geeetech.com/wiki/index.php/File:Gprs10.jpg" class="image"><img alt="Gprs10.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gprs10.jpg" width="500" height="473"></a>
+</p><p>Select the corresponding IP address and click "Send".
+"RX Buffer" dialog in STC-ISP will accept the information returned as below. 
+</p><p><br>
+<a href="http://www.geeetech.com/wiki/index.php/File:Gprs11.jpg" class="image"><img alt="Gprs11.jpg" src="./Arduino GPRS Shield - Geeetech Wiki_files/500px-Gprs11.jpg" width="500" height="297"></a>
+</p><p><br> 
+PS:
+</p><p><a href="http://www.geeetech.com/wiki/images/d/d3/For_gprs_networking_test.rar" class="internal" title="For gprs networking test.rar">Media:For gprs networking test.rar</a>
+</p>
+<h2> <span class="mw-headline" id="How_to_buy"> How to buy  </span></h2>
+<p>Click here to buy <a rel="nofollow" class="external text" href="http://www.geeetech.com/gprsgsm-sim900-shield-board-arduino-compatible-p-610.html">Arduino GPRS Shield </a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 88/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key geeetech_wiki:pcache:idhash:166-0!*!*!!en!2!* and timestamp 20140806083546 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from "<a href="http://www.geeetech.com/wiki/index.php?title=Arduino_GPRS_Shield&oldid=4199">http://www.geeetech.com/wiki/index.php?title=Arduino_GPRS_Shield&amp;oldid=4199</a>"				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id="catlinks" class="catlinks catlinks-allhidden"></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+		<li id="pt-login"><a href="http://www.geeetech.com/wiki/index.php?title=Special:UserLogin&returnto=Arduino_GPRS_Shield" title="You are encouraged to log in; however, it is not mandatory [alt-o]" accesskey="o">Log in</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li id="ca-nstab-main" class="selected"><span><a href="./Arduino GPRS Shield - Geeetech Wiki_files/Arduino GPRS Shield - Geeetech Wiki.htm" title="View the content page [alt-c]" accesskey="c">Page</a></span></li>
+					<li id="ca-talk" class="new"><span><a href="http://www.geeetech.com/wiki/index.php?title=Talk:Arduino_GPRS_Shield&action=edit&redlink=1" title="Discussion about the content page [alt-t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+		<h5><span>Variants</span><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="./Arduino GPRS Shield - Geeetech Wiki_files/Arduino GPRS Shield - Geeetech Wiki.htm">Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="http://www.geeetech.com/wiki/index.php?title=Arduino_GPRS_Shield&action=edit" title="This page is protected.
+You can view its source [alt-e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://www.geeetech.com/wiki/index.php?title=Arduino_GPRS_Shield&action=history" title="Past revisions of this page [alt-h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="http://www.geeetech.com/wiki/index.php/Arduino_GPRS_Shield#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="http://www.geeetech.com/wiki/index.php" id="searchform">
+		<input type="hidden" name="title" value="Special:Search">
+				<input type="search" name="search" title="Search Geeetech Wiki [alt-f]" accesskey="f" id="searchInput">		<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton">		<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton">			</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(/wiki/skins/common/images/wiki.png);" href="http://www.geeetech.com/"></a></div>
+				<!-- /logo -->
+				
+<!-- Navigation -->
+<div class="portal" id="p-Navigation">
+	<h5>Navigation</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="http://www.geeetech.com/wiki/index.php/Main_Page" title="Visit the main page [alt-z]" accesskey="z">Main page</a></li>
+			<li id="n-product"><a href="http://www.geeetech.com/wiki/index.php/Product">product</a></li>
+			<li id="n-Experiment"><a href="http://www.geeetech.com/wiki/index.php/Experiment">Experiment</a></li>
+			<li id="n-Tutorials"><a href="http://www.geeetech.com/wiki/index.php/Tutorials">Tutorials</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Navigation -->
+
+<!-- Friendly ARM -->
+<div class="portal" id="p-Friendly_ARM">
+	<h5>Friendly ARM</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Mini2440"><a href="http://www.geeetech.com/wiki/index.php/Mini2440">Mini2440</a></li>
+			<li id="n-Micro2440"><a href="http://www.geeetech.com/wiki/index.php/Micro2440">Micro2440</a></li>
+			<li id="n-Mini6410"><a href="http://www.geeetech.com/wiki/index.php/Mini6410">Mini6410</a></li>
+			<li id="n-Tiny6410"><a href="http://www.geeetech.com/wiki/index.php/Tiny6410">Tiny6410</a></li>
+			<li id="n-Mini210"><a href="http://www.geeetech.com/wiki/index.php/Mini210">Mini210</a></li>
+			<li id="n-Mini210s"><a href="http://www.geeetech.com/wiki/index.php/Mini210s">Mini210s</a></li>
+			<li id="n-Tiny210"><a href="http://www.geeetech.com/wiki/index.php/Tiny210">Tiny210</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Friendly ARM -->
+
+<!-- Links -->
+<div class="portal" id="p-Links">
+	<h5>Links</h5>
+	<div class="body">
+		<ul>
+			<li id="n-Forum"><a href="http://www.geeetech.com/forum" rel="nofollow">Forum</a></li>
+			<li id="n-Bazzar"><a href="http://www.geeetech.com/" rel="nofollow">Bazzar</a></li>
+			<li id="n-Blog"><a href="http://www.geeetech.com/?main_page=wordpress" rel="nofollow">Blog</a></li>
+			<li id="n-Contact-us"><a href="http://www.geeetech.com/contact_us.html" rel="nofollow">Contact us</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /Links -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class="portal" id="p-tb">
+	<h5>Toolbox</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="http://www.geeetech.com/wiki/index.php/Special:WhatLinksHere/Arduino_GPRS_Shield" title="A list of all wiki pages that link here [alt-j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="http://www.geeetech.com/wiki/index.php/Special:RecentChangesLinked/Arduino_GPRS_Shield" title="Recent changes in pages linked from this page [alt-k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="http://www.geeetech.com/wiki/index.php/Special:SpecialPages" title="A list of all special pages [alt-q]" accesskey="q">Special pages</a></li>
+			<li><a href="http://www.geeetech.com/wiki/index.php?title=Arduino_GPRS_Shield&printable=yes" rel="alternate">Printable version</a></li>
+			<li id="t-permalink"><a href="http://www.geeetech.com/wiki/index.php?title=Arduino_GPRS_Shield&oldid=4199" title="Permanent link to this revision of the page">Permanent link</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 8 July 2014, at 03:53.</li>
+											<li id="footer-info-viewcount">This page has been accessed 58,133 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://www.geeetech.com/wiki/index.php/Geeetech_Wiki:Privacy_policy" title="Geeetech Wiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://www.geeetech.com/wiki/index.php/Geeetech_Wiki:About" title="Geeetech Wiki:About">About Geeetech Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://www.geeetech.com/wiki/index.php/Geeetech_Wiki:General_disclaimer" title="Geeetech Wiki:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="./Arduino GPRS Shield - Geeetech Wiki_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<!-- fixalpha -->
+		<script type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </script>
+		<!-- /fixalpha -->
+		<script src="./Arduino GPRS Shield - Geeetech Wiki_files/load(3).php"></script>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script><script type="text/javascript" src="./Arduino GPRS Shield - Geeetech Wiki_files/load(4).php"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: geeetech_wiki:resourceloader:filter:minify-js:4:19a4b18a9ac79a6b8c60b24af4668814 */
+}
+</script><!-- Served in 0.231 secs. -->
+	
+
+</body></html>

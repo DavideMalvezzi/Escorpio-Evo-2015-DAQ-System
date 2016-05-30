@@ -1,0 +1,42 @@
+//**************************************************//
+// PACCHETTI CAN TRASMESSI -BMS-                    //
+//**************************************************//
+//   (dal 0x400 in poi)                             //
+//                                                  //
+//   -0x400:  BMS STATUS 8b, terminated string      //
+//                                                  //
+//   -0x401:  CELL 1 VOLTAGE   2b, signed int, mV   //
+//   -0x402:  CELL 2 VOLTAGE   2b, signed int, mV   //
+//   -0x403:  CELL 3 VOLTAGE   2b, signed int, mV   //
+//   -0x404:  CELL 4 VOLTAGE   2b, signed int, mV   //
+//   -0x405:  CELL 5 VOLTAGE   2b, signed int, mV   //
+//   -0x406:  CELL 6 VOLTAGE   2b, signed int, mV   //
+//   -0x407:  CELL 7 VOLTAGE   2b, signed int, mV   //
+//   -0x408:  CELL 8 VOLTAGE   2b, signed int, mV   //
+//   -0x409:  CELL 9 VOLTAGE   2b, signed int, mV   //
+//   -0x40A:  CELL 10 VOLTAGE  2b, signed int, mV   //
+//   -0x40B:  CELL 11 VOLTAGE  2b, signed int, mV   //
+//   -0x40C:  CELL 12 VOLTAGE  2b, signed int, mV   //
+//                                                  //
+//   -0x410:  PACK VOLTAGE    2b, unsigned int, mV  //
+//   -0x411:  CHG VOLTAGE     2b, unsigned int, mV  //
+//   -0x412:  LOAD VOLTAGE    2b, unsigned int, mV  //
+//   -0x413:  PACK CURRENT    4b, signed long, mA   //
+//   -0x414:  TEMP1           2b, unsigned int, m°C //
+//   -0x414:  TEMP2           2b, unsigned int, m°C //
+//                                                  //
+//   -0x41A:  BAL FLAGS       2b, flags             //
+//             DATA[0] = cell8-cell1                //
+//             DATA[1] = cell12-cell9               //
+//   -0x41B:  ERROR FLAGS     2b, flags             //
+//             2bytes, MSByte first, 16 bit         //
+//             -bit0:  cell overvoltage             //
+//             -bit1:  cell undervoltage            //
+//             -bit2:  pack undervoltage            //
+//             -bit3:  pack overvoltage             //
+//             -bit4:  pack overtemp                //
+//             -bit5:  pack deltaV                  //
+//             -bit6:  pack chg overcurrent         //
+//             -bit7:  pack dischg overcurrent      //
+//                                                  //
+//**************************************************//
