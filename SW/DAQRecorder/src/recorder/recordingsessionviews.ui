@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RecordingSessionViews</class>
+ <widget class="QWidget" name="RecordingSessionViews">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>637</width>
+    <height>368</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="sessionTabs">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="summaryTab">
+      <attribute name="icon">
+       <iconset resource="../Resource.qrc">
+        <normaloff>:/images/icons/summary.png</normaloff>:/images/icons/summary.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Sommario</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="SummaryView" name="summaryView" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="chartsTab">
+      <attribute name="icon">
+       <iconset resource="../Resource.qrc">
+        <normaloff>:/images/icons/chart.png</normaloff>:/images/icons/chart.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Grafici</string>
+      </attribute>
+      <layout class="QGridLayout" name="chartsLayout">
+       <property name="leftMargin">
+        <number>3</number>
+       </property>
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <property name="rightMargin">
+        <number>3</number>
+       </property>
+       <property name="bottomMargin">
+        <number>3</number>
+       </property>
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="ChartView" name="chartView" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="dashTab">
+      <attribute name="icon">
+       <iconset resource="../Resource.qrc">
+        <normaloff>:/images/icons/dashboard.png</normaloff>:/images/icons/dashboard.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Cruscotto</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="DashView" name="dashView" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gpsTab">
+      <attribute name="icon">
+       <iconset resource="../Resource.qrc">
+        <normaloff>:/images/icons/gps.png</normaloff>:/images/icons/gps.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>GPS</string>
+      </attribute>
+      <layout class="QGridLayout" name="gpsLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="GPSView" name="gpsView" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="utilsTab">
+      <attribute name="icon">
+       <iconset resource="../Resource.qrc">
+        <normaloff>:/images/icons/tools.png</normaloff>:/images/icons/tools.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Utilità</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="UtilitiesView" name="utilitiesView" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ChartView</class>
+   <extends>QWidget</extends>
+   <header>view/viewchart.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GPSView</class>
+   <extends>QWidget</extends>
+   <header>view/viewgps.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SummaryView</class>
+   <extends>QWidget</extends>
+   <header>view/viewsummary.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DashView</class>
+   <extends>QWidget</extends>
+   <header>view/viewdash.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UtilitiesView</class>
+   <extends>QWidget</extends>
+   <header>view/viewutilities.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

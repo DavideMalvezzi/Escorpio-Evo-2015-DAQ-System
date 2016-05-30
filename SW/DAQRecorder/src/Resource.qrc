@@ -1,0 +1,65 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>SplashScreen.png</file>
+        <file>Icon.png</file>
+        <file>icons/refresh.png</file>
+        <file>icons/chart.png</file>
+        <file>icons/exit.png</file>
+        <file>icons/export.png</file>
+        <file>icons/gps.png</file>
+        <file>icons/import.png</file>
+        <file>icons/new.png</file>
+        <file>icons/open.png</file>
+        <file>icons/console.png</file>
+        <file>icons/gsm.png</file>
+        <file>icons/track.png</file>
+        <file>icons/dashboard.png</file>
+        <file>icons/channels.png</file>
+        <file>icons/citypoint.png</file>
+        <file>icons/endpoint.png</file>
+        <file>icons/startpoint.png</file>
+        <file>icons/vehicle.png</file>
+        <file>icons/waypoint.png</file>
+        <file>icons/minus.png</file>
+        <file>icons/plus.png</file>
+        <file>icons/angol.png</file>
+        <file>icons/bars.png</file>
+        <file>icons/digit.png</file>
+        <file>icons/label.png</file>
+        <file>icons/led.png</file>
+        <file>icons/meter.png</file>
+        <file>icons/thermometer.png</file>
+        <file>icons/warning.png</file>
+        <file>icons/summary.png</file>
+        <file>icons/tools.png</file>
+        <file>icons/alarm.png</file>
+        <file>icons/startcall.png</file>
+        <file>icons/stopcall.png</file>
+        <file>icons/team.png</file>
+        <file>icons/holdcall.png</file>
+        <file>icons/kickcall.png</file>
+        <file>icons/nocall.png</file>
+        <file>icons/solocall.png</file>
+        <file>icons/groupcall.png</file>
+        <file>icons/info.png</file>
+        <file>icons/davinci.png</file>
+        <file>icons/facebook.png</file>
+        <file>Logo.png</file>
+        <file>icons/zeroc.png</file>
+        <file>icons/qcp.png</file>
+        <file>icons/iconarc.png</file>
+        <file>icons/mapg.png</file>
+        <file>icons/centerpoint.png</file>
+        <file>icons/loadcall.png</file>
+        <file>icons/record.png</file>
+        <file>icons/stop.png</file>
+        <file>icons/backward.png</file>
+        <file>icons/timetable.png</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>DigitFont.ttf</file>
+    </qresource>
+    <qresource prefix="/db">
+        <file>EscorpioDB.sql</file>
+    </qresource>
+</RCC>

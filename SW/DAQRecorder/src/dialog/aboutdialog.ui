@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AboutDialog</class>
+ <widget class="QDialog" name="AboutDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>495</width>
+    <height>280</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>495</width>
+    <height>280</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>495</width>
+    <height>280</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Informazioni su Escorpio DAQ Software</string>
+  </property>
+  <widget class="QLabel" name="logoLabel">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>5</y>
+     <width>195</width>
+     <height>195</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/Logo.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>205</x>
+     <y>6</y>
+     <width>281</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Escorpio DAQ Software v1.0&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Strumento di acquisizione, salvataggio e analisi dati&lt;br/&gt;realizzato per il prototipo Escorpio del Team ZeroC&lt;/p&gt;&lt;p&gt;Contatti: &lt;a href=&quot;http://www.itivinci.mo.it/&quot;&gt;&lt;img src=&quot;:/images/icons/davinci.png&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;http://www.teamzeroc.it/index.php?l=it&quot;&gt;&lt;img src=&quot;:/images/icons/zeroc.png&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;https://www.facebook.com/TeamZeroCEscorpioEvo&quot;&gt;&lt;img src=&quot;:/images/icons/facebook.png&quot;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Librerie di terze parti:&lt;/span&gt;&lt;br/&gt;&lt;a href=&quot;http://www.qcustomplot.com/index.php&quot;&gt;&lt;img src=&quot;:/images/icons/qcp.png&quot;/&gt;&lt;/a&gt;QCustomPlot - Widget per la visualizzazione dei dati&lt;br/&gt;&lt;a href=&quot;https://github.com/raptorswing/MapGraphics&quot;&gt;&lt;img src=&quot;:/images/icons/mapg.png&quot;/&gt;&lt;/a&gt;MapGraphics - Visualizzatore di mappe tile-based&lt;br/&gt;&lt;a href=&quot;http://www.iconarchive.com/&quot;&gt;&lt;img src=&quot;:/images/icons/iconarc.png&quot;/&gt;&lt;/a&gt;IconArchive - Icone&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="openExternalLinks">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="OKbutton">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>250</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>200</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Software realizzato da Davide Malvezzi&lt;br&gt;Logo realizzato da Francesco Andreoli&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
