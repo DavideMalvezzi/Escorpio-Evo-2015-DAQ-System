@@ -13,3 +13,5 @@ to a remote PC using a [GSM SIM 900 module](http://www.geeetech.com/wiki/index.p
 - the remote PC was connected to another GSM SIM 900 module via USB and the software was in charge of controlling it, parse all the data 
 coming from the other module and show it with charts and widgets. All the visualization views are completely personalizable thanks to the
 user interface. All the data received is also saved in a local SQLite database.
+
+All the code is C++, using Qt Library for the PC software.
